@@ -1,0 +1,25 @@
+{
+  "name": "smart-laboratory",
+  "version": "1.0.0",
+  "description": "AI-powered virtual science laboratory with Ollama integration",
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm start",
+    "start:ollama": "start-ollama.bat",
+    "dev": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "setup:db": "mysql -u root -p < server/config/database.sql"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "keywords": [
+    "science",
+    "laboratory",
+    "education",
+    "ai",
+    "ollama",
+    "virtual-lab"
+  ],
+  "license": "MIT"
+}
